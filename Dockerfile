@@ -11,7 +11,7 @@ COPY . .
 RUN go build -o main .
 
 # Use a smaller, production-ready image for the final image
-FROM alpine:latest
+FROM alpine:3.23.3
 LABEL maintainer="Moi" \
     org.opencontainers.image.source="https://github.com/snyk-cs-goof-org/go-goof" \
     org.opencontainers.image.revision=$VCS_REF \
